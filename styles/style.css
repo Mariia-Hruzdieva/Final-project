@@ -81,6 +81,114 @@ body {
   line-height: 26px;
 }
 
+.partner {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hillel {
+  background-color: #1C4280;
+}
+.hillel img {
+  width: 217px;
+  height: 48px;
+}
+
+.wannabiz {
+  background-color: #143646;
+}
+.wannabiz img {
+  width: 199px;
+  height: 32px;
+}
+
+.tapgerine {
+  background-color: #F48B30;
+}
+.tapgerine img {
+  width: 179px;
+  height: 44px;
+}
+
+.look3d {
+  background: #9E4DC3;
+}
+.look3d img {
+  width: 180px;
+  height: 42px;
+}
+
+.orangear {
+  background-color: #FD9339;
+}
+.orangear img {
+  width: 174px;
+  height: 44px;
+}
+
+.adtellige {
+  background-color: #E2E2E4;
+}
+.adtellige img {
+  width: 187px;
+  height: 48px;
+}
+
+.clickky {
+  background-color: #C71C36;
+}
+.clickky img {
+  width: 138px;
+  height: 61px;
+}
+
+.eco-leasing {
+  background-color: #DCF3F9;
+}
+.eco-leasing img {
+  width: 146px;
+  height: 76px;
+}
+
+.infratek {
+  background-color: #EAEAEA;
+}
+.infratek img {
+  width: 182px;
+  height: 60px;
+}
+
+.citypark {
+  background-color: #282240;
+}
+.citypark img {
+  width: 181px;
+  height: 38px;
+}
+
+.artprint {
+  background-color: #1D4568;
+}
+.artprint img {
+  width: 189px;
+  height: 46px;
+}
+
+.ultimate-card {
+  background-color: #000;
+}
+.ultimate-card img {
+  width: 152px;
+  height: 95px;
+}
+
+@media (max-width: 768px) {
+  .partner:nth-child(n+7) {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
   .wrapper {
     width: 648px;
@@ -93,6 +201,13 @@ body {
   .block {
     width: 294px;
   }
+  .partners {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .partner {
+    width: 33.33%;
+  }
 }
 @media (min-width: 1024px) {
   .wrapper {
@@ -100,6 +215,9 @@ body {
   }
   .block {
     width: 261px;
+  }
+  .partner {
+    width: 25%;
   }
 }
 @media (min-width: 1440px) {
@@ -110,12 +228,19 @@ body {
     width: 400px;
   }
 }
-@media (min-width: 11920px) {
+@media (min-width: 1920px) {
   .wrapper {
     width: 1600px;
   }
   .block {
     width: 493px;
+  }
+  .partners {
+    background-color: #000;
+    width: 1720px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
   }
 }
 
