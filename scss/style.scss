@@ -1,12 +1,95 @@
 @import url(../styles/reset.css);
 @import url(../fonts/stylesheet.css);
 
+/// colors
+$main-regular: #323264;
+$main-alt: #46466E;
+$main-soft: #686887;
+$accent: #F0145A;
+$active-regular: #24A3FF;
+$active-hover: #0085FF;
+$active-active: #006CCF;
+$grey-bg: #F5F5FA;
+$grey-bg-alt: #EDEDF7;
+$grey-text: #B3B3BA;
+$grey-separator: #E6E6F0;
+$black: #000;
+$basic-white: #fff;
+$gradient-regular: linear-gradient(135deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
+$gradient-soft: linear-gradient(23deg, #323264 0%, #323264 50.63%, #7A425E 100%);
+$gradient-red: linear-gradient(310deg, #F0145A 0%, #693264 100%);
+$gradient-supersoft: linear-gradient(208deg, #323264 0%, #323264 59.90%, #643E72 100%);
+$gradient-red-text: linear-gradient(118deg, #F0145A 0%, #EF8080 100%);
+
+/// fonts
+
+$font: 'Montserrat', sans-serif;
+
+@mixin hero-regular {
+    font-size: 38px;
+    font-weight: 700;
+    background: $gradient-red-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin h2-regular {
+    color: $main-regular;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+@mixin h3-regular {
+    color: $active-regular;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+@mixin h3-caps {
+    color: $active-regular;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@mixin h4-regular {
+    color: $main-regular;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@mixin p-regular {
+    color: $basic-white;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+@mixin introduction {
+    color: $basic-white;
+    line-height: 30px;
+}
+
+@mixin list {
+    color: $black;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+@mixin link-regular {
+    color: $active-regular;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font;
 }
 
 .wrapper {
@@ -16,7 +99,7 @@ body {
 }
 
 .background-top {
-    background: var(--gradient-supersoft, linear-gradient(208deg, #323264 0%, #323264 59.90%, #643E72 100%));
+    background: $gradient-supersoft;
 }
 
 .blocks {
@@ -26,31 +109,24 @@ body {
 }
 
 .services-title {
-    display: block;
-    position: relative;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--active-regular, #24A3FF);
-    margin-bottom: 10px;
     text-decoration: none;
+    @include h3-caps;
 }
 
 .services-title::after {
     content: url(../images/Arrow.png);
-    position: absolute;
+    position: relative;
+    left: 2px;
+    top: 1px;
+    display: inline-block;
     width: 12px;
     height: 12px;
-    margin-left: 2px;
 }
 
 .blocks-title {
+    @include hero-regular;
     margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 700;
-    background: var(--gradient-red-text, linear-gradient(118deg, #F0145A 0%, #EF8080 100%));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    margin-top: 10px;
 }
 
 .block-icon {
@@ -59,7 +135,7 @@ body {
     height: 92px;
     padding: 14px;
     border-radius: 24px;
-    background: var(--basic-white, #FFF);
+    background: $basic-white;
 }
 
 .block-icon img {
@@ -69,15 +145,11 @@ body {
 
 .block-title {
     margin-bottom: 15px;
-    color: var(--active-regular, #24A3FF);
-    font-size: 22px;
-    font-weight: 700;
+    @include h3-regular;
 }
 
 .block-content {
-    color: var(--basic-white, #FFF);
-    font-size: 16px;
-    line-height: 26px;
+    @include p-regular;
 }
 
 @media (min-width: 768px) {
@@ -93,5 +165,35 @@ body {
 
     .block {
         width: 294px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        width: 904px;
+    }
+
+    .block {
+        width: 261px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .wrapper {
+        width: 1320px;
+    }
+
+    .block {
+        width: 400px;
+    }
+}
+
+@media (min-width: 11920px) {
+    .wrapper {
+        width: 1600px;
+    }
+
+    .block {
+        width: 493px;
     }
 }

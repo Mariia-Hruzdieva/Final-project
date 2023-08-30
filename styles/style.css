@@ -15,7 +15,7 @@ body {
 }
 
 .background-top {
-  background: var(--gradient-supersoft, linear-gradient(208deg, #323264 0%, #323264 59.9%, #643E72 100%));
+  background: linear-gradient(208deg, #323264 0%, #323264 59.9%, #643E72 100%);
 }
 
 .blocks {
@@ -25,31 +25,33 @@ body {
 }
 
 .services-title {
-  display: block;
-  position: relative;
+  text-decoration: none;
+  color: #24A3FF;
   font-size: 14px;
   font-weight: 700;
-  color: var(--active-regular, #24A3FF);
-  margin-bottom: 10px;
-  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .services-title::after {
   content: url(../images/Arrow.png);
-  position: absolute;
+  position: relative;
+  left: 2px;
+  top: 1px;
+  display: inline-block;
   width: 12px;
   height: 12px;
-  margin-left: 2px;
 }
 
 .blocks-title {
-  margin-bottom: 30px;
-  font-size: 30px;
+  font-size: 38px;
   font-weight: 700;
-  background: var(--gradient-red-text, linear-gradient(118deg, #F0145A 0%, #EF8080 100%));
+  background: linear-gradient(118deg, #F0145A 0%, #EF8080 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .block-icon {
@@ -58,7 +60,7 @@ body {
   height: 92px;
   padding: 14px;
   border-radius: 24px;
-  background: var(--basic-white, #FFF);
+  background: #fff;
 }
 
 .block-icon img {
@@ -68,13 +70,13 @@ body {
 
 .block-title {
   margin-bottom: 15px;
-  color: var(--active-regular, #24A3FF);
+  color: #24A3FF;
   font-size: 22px;
   font-weight: 700;
 }
 
 .block-content {
-  color: var(--basic-white, #FFF);
+  color: #fff;
   font-size: 16px;
   line-height: 26px;
 }
@@ -90,6 +92,30 @@ body {
   }
   .block {
     width: 294px;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 904px;
+  }
+  .block {
+    width: 261px;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    width: 1320px;
+  }
+  .block {
+    width: 400px;
+  }
+}
+@media (min-width: 11920px) {
+  .wrapper {
+    width: 1600px;
+  }
+  .block {
+    width: 493px;
   }
 }
 
