@@ -16,6 +16,128 @@ body {
 
 .background-top {
   background: linear-gradient(208deg, #323264 0%, #323264 59.9%, #643E72 100%);
+  padding-bottom: 60px;
+  border-radius: 0px 0px 12px 12px;
+}
+
+.cascade1 {
+  margin-left: auto;
+  margin-right: auto;
+  height: 10px;
+  width: 89.33%;
+  border-radius: 0px 0px 12px 12px;
+  background-color: #CACADB;
+}
+
+.cascade2 {
+  margin-left: auto;
+  margin-right: auto;
+  height: 10px;
+  width: 78.67%;
+  border-radius: 0px 0px 12px 12px;
+  background-color: #E7E7F2;
+}
+
+.team {
+  background-color: #F5F5FA;
+  border-radius: 12px 12px 12px 12px;
+  overflow: hidden;
+}
+
+.team-article {
+  padding: 30px;
+}
+
+.slider-articles {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+
+.team-photo {
+  width: auto;
+  height: 500px;
+  background-image: url(../images/photo-alexandrovsky.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.team-page-link {
+  text-decoration: none;
+  color: #24A3FF;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.team-page-link::after {
+  content: url(../images/Arrow.png);
+  position: relative;
+  left: 2px;
+  top: 1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+
+.team-short-quote {
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(118deg, #F0145A 0%, #EF8080 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: linear-gradient(118deg, #F0145A 0%, #EF8080 100%);
+  margin-top: 10px;
+  margin-bottom: 33px;
+}
+
+.team-name {
+  color: #323264;
+  font-size: 16px;
+  font-weight: 700;
+  color: #B3B3BA;
+}
+
+.team-position {
+  color: #B3B3BA;
+  font-size: 14px;
+  margin-top: 14px;
+}
+
+.slider-buttons {
+  padding-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.slider-article-button {
+  border: none;
+  background-color: #24A3FF;
+  opacity: 0.2;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.slider-article-button:active {
+  opacity: 1;
+}
+
+.partners-header {
+  color: #24A3FF;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #323264;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
 }
 
 .blocks {
@@ -184,6 +306,111 @@ body {
   height: 95px;
 }
 
+.publications {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #F5F5FA;
+}
+
+.publications-link {
+  color: #24A3FF;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.publications-link::after {
+  content: url(../images/Arrow.png);
+  position: relative;
+  left: 2px;
+  top: 1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+
+.publications-header {
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(118deg, #F0145A 0%, #EF8080 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.publications-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 30px;
+  justify-content: space-between;
+}
+
+.publications-card {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.publications-card-img {
+  width: auto;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.publication1 {
+  background-image: url(../images/Publication-1.jpg);
+}
+
+.publication2 {
+  background-image: url(../images/Publication-2.jpg);
+}
+
+.publication3 {
+  background-image: url(../images/Publication-3.jpg);
+}
+
+.publications-card-content {
+  padding: 30px;
+}
+
+.publications-card-title {
+  color: #323264;
+  font-size: 16px;
+  font-weight: 700;
+  color: #24A3FF;
+  margin-bottom: 15px;
+}
+
+.publications-card-date {
+  color: #B3B3BA;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.publications-card-separator {
+  background-color: #E6E6F0;
+  width: 100%;
+  height: 4px;
+  margin-bottom: 15px;
+}
+
+.publications-card-text {
+  color: #B3B3BA;
+  font-size: 14px;
+  color: #000;
+}
+
 @media (max-width: 768px) {
   .partner:nth-child(n+7) {
     display: none;
@@ -199,7 +426,7 @@ body {
     flex-wrap: wrap;
   }
   .block {
-    width: 294px;
+    width: calc( 50% - 30px );
   }
   .partners {
     display: flex;
@@ -208,16 +435,77 @@ body {
   .partner {
     width: 33.33%;
   }
+  .cascade1 {
+    width: 94.79%;
+  }
+  .cascade2 {
+    width: 89.58%;
+  }
+  .slider-articles {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 60px;
+  }
+  .team-short-quote {
+    font-size: 38px;
+    font-weight: 700;
+    background: linear-gradient(118deg, #F0145A 0%, #EF8080 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: linear-gradient(118deg, #F0145A 0%, #EF8080 100%);
+  }
+  .publications-header {
+    font-size: 38px;
+    font-weight: 700;
+    background: linear-gradient(118deg, #F0145A 0%, #EF8080 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 10px;
+  }
+  .publications {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .publications-card {
+    width: calc( 50% - 15px );
+  }
+  .publications-card:last-of-type {
+    width: 100%;
+  }
 }
 @media (min-width: 1024px) {
   .wrapper {
     width: 904px;
   }
   .block {
-    width: 261px;
+    width: calc( 32% - 30px );
   }
   .partner {
     width: 25%;
+  }
+  .cascade1 {
+    width: 96.09%;
+  }
+  .cascade2 {
+    width: 92.19%;
+  }
+  .team-photo {
+    height: auto;
+    width: 400px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .team {
+    display: flex;
+    flex-direction: row;
+  }
+  .publications-card {
+    width: calc( 33% - 15px );
+  }
+  .publications-card:last-of-type {
+    width: calc( 33% - 15px );
   }
 }
 @media (min-width: 1440px) {
@@ -226,6 +514,12 @@ body {
   }
   .block {
     width: 400px;
+  }
+  .cascade1 {
+    width: 97.22%;
+  }
+  .cascade2 {
+    width: 94.44%;
   }
 }
 @media (min-width: 1920px) {
@@ -239,8 +533,23 @@ body {
     width: 1720px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 60px;
     border-radius: 15px;
     overflow: hidden;
+  }
+  .cascade1 {
+    width: 97.92%;
+  }
+  .cascade2 {
+    width: 95.83%;
+  }
+  .slider-articles {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+  .publications {
+    padding-left: 160px;
+    padding-right: 160px;
   }
 }
 
