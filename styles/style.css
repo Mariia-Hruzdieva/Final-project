@@ -307,10 +307,13 @@ body {
 }
 
 .publications {
+  background-color: #F5F5FA;
+}
+
+.publications-content {
   padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: #F5F5FA;
 }
 
 .publications-link {
@@ -464,7 +467,7 @@ body {
     -webkit-text-fill-color: transparent;
     margin-top: 10px;
   }
-  .publications {
+  .publications-content {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -544,12 +547,14 @@ body {
     width: 95.83%;
   }
   .slider-articles {
-    padding-left: 160px;
-    padding-right: 160px;
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .publications {
-    padding-left: 160px;
-    padding-right: 160px;
+  .publications-content {
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
