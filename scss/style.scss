@@ -1,5 +1,6 @@
 @import url(../styles/reset.css);
 @import url(../fonts/stylesheet.css);
+@import url(../styles/header.css);
 
 /// colors
 $main-regular: #323264;
@@ -121,6 +122,12 @@ body {
     padding-bottom: 60px;
     border-radius: 0px 0px 12px 12px;
 }
+
+// .logo {
+//     background-image: url(../images/Logo.png);
+//     width: 130px;
+//     height: 60px;
+// }
 
 .cascade1 {
     margin-left: auto;

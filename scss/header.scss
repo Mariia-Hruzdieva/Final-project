@@ -1,0 +1,435 @@
+/// colors
+$main-regular: #323264;
+$main-alt: #46466E;
+$main-soft: #686887;
+$accent: #F0145A;
+$active-regular: #24A3FF;
+$active-hover: #0085FF;
+$active-active: #006CCF;
+$grey-bg: #F5F5FA;
+$grey-bg-alt: #EDEDF7;
+$grey-text: #B3B3BA;
+$grey-separator: #E6E6F0;
+$basic-black: #000;
+$basic-white: #fff;
+$gradient-regular: linear-gradient(135deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
+$gradient-soft: linear-gradient(23deg, #323264 0%, #323264 50.63%, #7A425E 100%);
+$gradient-red: linear-gradient(310deg, #F0145A 0%, #693264 100%);
+$gradient-supersoft: linear-gradient(208deg, #323264 0%, #323264 59.90%, #643E72 100%);
+$gradient-red-text: linear-gradient(118deg, #F0145A 0%, #EF8080 100%);
+
+/// fonts
+
+$font: 'Montserrat', sans-serif;
+
+@mixin hero-regular {
+    font-size: 38px;
+    font-weight: 700;
+    background: $gradient-red-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin hero-mobile {
+    font-size: 30px;
+    font-weight: 700;
+    background: $gradient-red-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin h2-regular {
+    color: $main-regular;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+@mixin h3-regular {
+    color: $active-regular;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+@mixin h3-caps {
+    color: $active-regular;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@mixin h4-regular {
+    color: $main-regular;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@mixin p-regular {
+    color: $basic-white;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+@mixin p-small {
+    color: $grey-text;
+    font-size: 14px;
+}
+
+@mixin introduction {
+    color: $basic-white;
+    line-height: 30px;
+}
+
+@mixin list {
+    color: $basic-black;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+@mixin link-regular {
+    color: $active-regular;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.hero-bg {
+    z-index: -1;
+}
+
+.hero-symbol {
+    background-image: url(../images/HeroSymbol.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    margin-right: -63px;
+    position: relative;
+}
+
+.hero-text {
+    color: $basic-white;
+    font-size: 38px;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-section {
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.button-scroll {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    border: none;
+    background: transparent;
+}
+
+.button-scroll-svg circle:hover,
+path:hover {
+    stroke: #F0145A;
+}
+
+.languages {
+    display: flex;
+    flex-direction: row;
+}
+
+.lang {
+    width: 33px;
+    height: 25px;
+    color: $basic-white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang:active {
+    background-color: $accent;
+    border-radius: 8px;
+}
+
+.logo img {
+    // background-image: url(../images/Logo.png);
+    // background-repeat: no-repeat;
+    width: 69px;
+    height: 32px;
+
+}
+
+.logo-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+}
+
+.header-nav-list {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.header-nav-list-bg {
+    position: fixed;
+    top: 0;
+    background: rgba(245, 245, 250, 0.20);
+    width: 100vh;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list:not(:last-of-type):after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $basic-white;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.header-adress {
+    color: $grey-text;
+    font-size: 16px;
+    visibility: hidden;
+}
+
+.header-phone {
+    color: $basic-white;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.social-icon {
+    background-image: url(../images/Facebook-Header-Icon.png);
+    width: 24px;
+    height: 24px;
+    visibility: hidden;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    visibility: hidden;
+}
+
+.navigation:nth-child(2) {
+    visibility: visible;
+}
+
+.nav-link {
+    color: $basic-white;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    visibility: hidden;
+
+}
+
+.nav-link:nth-child(2) {
+    visibility: visible;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    order: -1;
+    margin-left: 20px;
+
+}
+
+.nav-link:nth-child(2)::after {
+    content: url(../images/Slash.svg);
+    height: 26px;
+    position: absolute;
+    left: -15px;
+}
+
+/* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+}
+
+/* стилизуем кнопку */
+.menu__btn {
+    display: flex;
+    /* используем flex для центрирования содержимого */
+    align-items: center;
+    /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 48px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn:active {
+    background-color: $grey-separator;
+    border-radius: 8px;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #EC6F5D;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+/* контейнер меню */
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 8px;
+    right: -100%;
+    width: 359px;
+    // height: 50vh;
+    margin: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-top: 64px;
+    list-style: none;
+    text-align: center;
+    background-color: $basic-white;
+    // box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    border-radius: 12px;
+}
+
+/* элементы меню */
+.menu__item {
+    display: block;
+    color: $active-regular;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 12px;
+    background-color: $grey-bg;
+    padding: 7px;
+    margin-bottom: 15px;
+}
+
+.menu__item:first-child {
+    // margin-top: 64px;
+}
+
+.menu__item:hover {
+    background-color: $grey-separator;
+}
+
+.menu__item:active {
+    color: $accent;
+}
+
+#menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__box {
+    visibility: visible;
+    right: 8px;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    transition-duration: .25s;
+}
+
+.menu__box {
+    transition-duration: .25s;
+}
+
+.menu__item {
+    transition-duration: .25s;
+}
+
+// для мобильной версии
+
+.nav-list:not(:last-of-type):after {
+    visibility: hidden;
+}
+
+@media (min-width: 768px) {
+    .hamburger-menu {
+        visibility: hidden;
+    }
+
+    .header-adress {
+        visibility: visible;
+    }
+
+    .social-icon {
+        visibility: visible;
+    }
+
+    .nav-list::after {
+        visibility: visible;
+    }
+
+    .navigation {
+        visibility: visible;
+    }
+
+    .header-nav-list-bg {
+        background: none;
+    }
+
+    .menu__btn {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 1024px) {}
