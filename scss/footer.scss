@@ -1,0 +1,214 @@
+/// colors
+$main-regular: #323264;
+$main-alt: #46466E;
+$main-soft: #686887;
+$accent: #F0145A;
+$active-regular: #24A3FF;
+$active-hover: #0085FF;
+$active-active: #006CCF;
+$grey-bg: #F5F5FA;
+$grey-bg-alt: #EDEDF7;
+$grey-text: #B3B3BA;
+$grey-separator: #E6E6F0;
+$basic-black: #000;
+$basic-white: #fff;
+$gradient-regular: linear-gradient(135deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
+$gradient-soft: linear-gradient(23deg, #323264 0%, #323264 50.63%, #7A425E 100%);
+$gradient-red: linear-gradient(310deg, #F0145A 0%, #693264 100%);
+$gradient-supersoft: linear-gradient(208deg, #323264 0%, #323264 59.90%, #643E72 100%);
+$gradient-red-text: linear-gradient(118deg, #F0145A 0%, #EF8080 100%);
+
+/// fonts
+
+$font: 'Montserrat', sans-serif;
+
+@mixin hero-regular {
+    font-size: 38px;
+    font-weight: 700;
+    background: $gradient-red-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin hero-mobile {
+    font-size: 30px;
+    font-weight: 700;
+    background: $gradient-red-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin h2-regular {
+    color: $main-regular;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+@mixin h3-regular {
+    color: $active-regular;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+@mixin h3-caps {
+    color: $active-regular;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@mixin h4-regular {
+    color: $main-regular;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@mixin p-regular {
+    color: $basic-white;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+@mixin p-small {
+    color: $grey-text;
+    font-size: 14px;
+}
+
+@mixin introduction {
+    color: $basic-white;
+    line-height: 30px;
+}
+
+@mixin list {
+    color: $basic-black;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+@mixin link-regular {
+    color: $active-regular;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.footer-bg .wrapper {
+    padding-top: 30px;
+}
+
+.footer-separator {
+    height: 2px;
+    width: 100%;
+    background-color: $grey-separator;
+}
+
+.footer-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.footer-adress {
+    color: $main-regular;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.on-map {
+    color: $active-regular;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 21px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.footer-social-icon {
+    background-image: url(../images/Facebook-Footer.svg);
+    width: 38px;
+    height: 38px;
+    margin-bottom: 10px;
+
+}
+
+.footer-phone a {
+    color: $main-alt;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-mail a {
+    color: $active-regular;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.footer-text {
+    color: $grey-text;
+    font-size: 16px;
+}
+
+.footer-bg {
+    background-color: #F5F5FA;
+}
+
+@media (min-width: 768px) {
+
+    .on-map::before,
+    .footer-phone::after,
+    .footer-phone::before {
+        content: '';
+        display: inline-block;
+        background-color: $grey-text;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 21px;
+    }
+
+    .footer-content-location {
+        display: flex;
+        align-items: center;
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .footer-contacts {
+        display: flex;
+        align-items: center;
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    .footer-text {
+        display: flex;
+        justify-content: end;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .footer-adress,
+    .on-map,
+    .footer-social-icon,
+    .footer-phone a,
+    .footer-mail a {
+        margin-bottom: 0px;
+    }
+}

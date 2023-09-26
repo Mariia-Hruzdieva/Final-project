@@ -99,7 +99,7 @@ $font: 'Montserrat', sans-serif;
 }
 
 .hero-symbol {
-    background-image: url(../images/HeroSymbol.svg);
+    background-image: url(../images/Symbol.svg);
     background-repeat: no-repeat;
     background-size: contain;
     height: 100vh;
@@ -174,6 +174,7 @@ path:hover {
 .logo-nav {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     position: absolute;
     top: 60px;
@@ -185,7 +186,7 @@ path:hover {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 15px;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 
 }
@@ -194,7 +195,7 @@ path:hover {
     position: fixed;
     top: 0;
     background: rgba(245, 245, 250, 0.20);
-    width: 100vh;
+    // width: 100vh;
 }
 
 .nav-list {
@@ -202,15 +203,11 @@ path:hover {
     align-items: center;
 }
 
-.nav-list:not(:last-of-type):after {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: $basic-white;
-    margin-left: 6px;
-    margin-right: 6px;
+.nav-link {
+    color: $basic-white;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .header-adress {
@@ -242,32 +239,6 @@ path:hover {
 
 .navigation:nth-child(2) {
     visibility: visible;
-}
-
-.nav-link {
-    color: $basic-white;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
-    visibility: hidden;
-
-}
-
-.nav-link:nth-child(2) {
-    visibility: visible;
-    font-size: 20px;
-    font-weight: 400;
-    position: relative;
-    order: -1;
-    margin-left: 20px;
-
-}
-
-.nav-link:nth-child(2)::after {
-    content: url(../images/Slash.svg);
-    height: 26px;
-    position: absolute;
-    left: -15px;
 }
 
 /* скрываем чекбокс */
@@ -392,11 +363,30 @@ path:hover {
     transition-duration: .25s;
 }
 
-// для мобильной версии
+@media (max-width: 768px) {
 
-.nav-list:not(:last-of-type):after {
-    visibility: hidden;
+    .nav-link:nth-child(2)::after {
+        content: url(../images/Slash.svg);
+        height: 26px;
+        position: absolute;
+        left: -15px;
+    }
+
+    .nav-link {
+        visibility: hidden;
+    }
+
+    .nav-link:nth-child(2) {
+        visibility: visible;
+        font-size: 20px;
+        font-weight: 400;
+        position: relative;
+        order: -1;
+        margin-left: 20px;
+
+    }
 }
+
 
 @media (min-width: 768px) {
     .hamburger-menu {
@@ -411,10 +401,6 @@ path:hover {
         visibility: visible;
     }
 
-    .nav-list::after {
-        visibility: visible;
-    }
-
     .navigation {
         visibility: visible;
     }
@@ -426,6 +412,60 @@ path:hover {
     .menu__btn {
         visibility: hidden;
     }
+
+    .nav-link {
+        visibility: visible;
+    }
+
+    .nav-list:not(:last-of-type)::after {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $basic-white;
+        margin-left: 6px;
+        margin-right: 6px;
+        // visibility: visible;
+    }
+
+    .logo-nav {
+        flex-direction: column;
+        align-items: self-start;
+        gap: 30px;
+
+    }
+
+    .logo img {
+        width: 130px;
+        height: 60px;
+
+    }
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    .hero-bg {
+        display: flex;
+
+    }
+
+
+    .hero-symbol {
+        width: 670px;
+        height: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-nav-list {
+        justify-content: flex-end;
+
+    }
+
+    .logo-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}

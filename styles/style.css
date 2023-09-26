@@ -1,6 +1,7 @@
 @import url(../styles/reset.css);
 @import url(../fonts/stylesheet.css);
 @import url(../styles/header.css);
+@import url(../styles/footer.css);
 * {
   box-sizing: border-box;
 }
@@ -12,7 +13,7 @@ body {
 .wrapper {
   margin-left: auto;
   margin-right: auto;
-  width: 315px;
+  width: 84%;
 }
 
 .background-top {
@@ -422,7 +423,7 @@ body {
 }
 @media (min-width: 768px) {
   .wrapper {
-    width: 648px;
+    width: 84.375%;
   }
   .blocks {
     flex-direction: row;
@@ -482,6 +483,7 @@ body {
 @media (min-width: 1024px) {
   .wrapper {
     width: 904px;
+    width: 88.28125%;
   }
   .block {
     width: calc( 32% - 30px );
@@ -514,7 +516,7 @@ body {
 }
 @media (min-width: 1440px) {
   .wrapper {
-    width: 1320px;
+    width: 91.6667%;
   }
   .block {
     width: 400px;
@@ -529,6 +531,7 @@ body {
 @media (min-width: 1920px) {
   .wrapper {
     width: 1600px;
+    width: 83.334%;
   }
   .block {
     width: 493px;
