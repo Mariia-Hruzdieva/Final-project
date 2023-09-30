@@ -8,53 +8,32 @@
 </head>
 <body>
     <div class="background-top">
-        <header>
-            <div class="hero-bg">
-                <div class="hero-symbol"></div>
-                <div class="hero-text">your legal solutions provider</div>
+        <header class="header">
+            <div class="bg-mobile tablet-hidden"></div>      
+            <div class="header-nav-list header-wrapper">
+                <div class="languages-nav-list">
+                    <a href="/" class="lang">ук</a>
+                    <a href="/" class="lang">ру</a>
+                    <a href="/" class="lang">en</a>
+                </div>
+                <div class="header-adress mobile-hidden">Kyiv, Mechnikova str., 14/1</div>
+                <div class="header-phone"><a href="tel:0800211927" class="header-phone">0800 211 927</a></div>
+                <div class="social-icon mobile-hidden"><a href="/"></a></div>
+            </div>    
+            <div class="header-logo header-wrapper">
+                    <img src="./images/Logo.png" alt="Logo">
+                    <p class="services-mobile tablet-hidden">services</p>
             </div>
-            <div class="hero-section">
-                <div class="header-nav-list-bg">
-                    <ul class="header-nav-list">
-                        <li class="languages nav-list">
-                            <a href="/" class="lang">ук</a>
-                            <a href="/" class="lang">ру</a>
-                            <a href="/" class="lang">en</a>
-                        </li>
-                        <li class="header-adress nav-list">Kyiv, Mechnikova str., 14/1</li>
-                        <li class="header-phone nav-list"><a href="tel:0800211927" class="header-phone">0800 211 927</a></li>
-                        <li class="social-icon nav-list"><a href="/"></a></li>
-                    </ul>
-                </div>
-                <div class="logo-nav">
-                    <div class="logo">
-                        <img src="./images/Logo.png" alt="Logo">
-                    </div>
-                    <nav class="navigation">
-                        <a href="" class="nav-link">about us</a>
-                        <a href="" class="nav-link">services</a>
-                        <a href="" class="nav-link">team</a>
-                        <a href="" class="nav-link">publications</a>
-                        <a href="" class="nav-link">contact</a>
-                    </nav>
-                </div>
+            <nav class="navigation header-wrapper mobile-hidden">
+                    <a href="" class="nav-link">about us</a>
+                    <a href="" class="nav-link">services</a>
+                    <a href="" class="nav-link">team</a>
+                    <a href="" class="nav-link">publications</a>
+                    <a href="" class="nav-link">contact</a>
+            </nav>
                 
-                <button class="button-scroll">
-                    <!-- <img src="./images/ButtonScroll.svg" alt=""> -->
-                    <svg class="button-scroll-svg" xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
-                        <g clip-path="url(#clip0_22728_11339)">
-                            <circle opacity="0.5" cx="21" cy="21" r="20" stroke="white" stroke-width="2"/>
-                            <path d="M12 18L21 27L30 18" stroke="white" stroke-width="2"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_22728_11339">
-                            <rect width="42" height="42" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </button>
-            </div>
-            <div class="hamburger-menu">
+            
+            <div class="hamburger-menu tablet-hidden">
                 <input id="menu__toggle" type="checkbox" />
                 <label class="menu__btn" for="menu__toggle">
                     <span></span>
@@ -68,6 +47,30 @@
                 </ul>
             </div>
         </header>
+        <section class="hero">
+            <picture>
+                <source srcset="./images/Symbol-1920px.svg" media="(min-width: 1920px)">
+                <source srcset="./images/Symbol-1440px.svg" media="(min-width: 1440px)">
+                <source srcset="./images/Symbol-1024px.svg" media="(min-width: 1024px)">
+                <source srcset="./images/Symbol-768px.svg" media="(min-width: 768px)">          
+                <img class="hero-img" src="./images/Symbol-375px.svg" alt="symbol">
+            </picture>
+                <div class="hero-text">your legal solutions provider</div>
+                <button class="button-scroll">
+                    <svg class="button-scroll-svg" xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                        <g clip-path="url(#clip0_22728_11339)">
+                            <circle opacity="0.5" cx="21" cy="21" r="20" stroke="white" stroke-width="2"/>
+                            <path d="M12 18L21 27L30 18" stroke="white" stroke-width="2"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_22728_11339">
+                            <rect width="42" height="42" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+        </section>
+            <!-- services -->
         <div class="wrapper">
             <a href="/" class="services-title">SERVICES</a>
             <h2 class="blocks-title">What can we do better than others?</h2>
