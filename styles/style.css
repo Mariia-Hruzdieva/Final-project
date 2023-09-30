@@ -416,6 +416,63 @@ body {
   color: #000;
 }
 
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.experience-heads {
+  white-space: nowrap;
+  color: #B3B3BA;
+  text-align: right;
+  font-size: 38px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.experience-heads::-webkit-scrollbar {
+  display: none;
+}
+
+.experience-heads h2:active {
+  background: var(--gradient-text-red-reversed, linear-gradient(90deg, #EF8080 0.84%, #F0145A 99.96%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.experience-spacer {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 4px;
+}
+
+.experience-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.experience-content h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.experience-content p {
+  color: #fff;
+  font-size: 19px;
+  line-height: 30px;
+}
+
 @media (max-width: 768px) {
   .partner:nth-child(n+7) {
     display: none;
@@ -479,6 +536,11 @@ body {
   .publications-card:last-of-type {
     width: 100%;
   }
+  .experience {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 60px;
+  }
 }
 @media (min-width: 1024px) {
   .wrapper {
@@ -512,6 +574,19 @@ body {
   }
   .publications-card:last-of-type {
     width: calc( 33% - 15px );
+  }
+  .experience {
+    display: flex;
+    flex-direction: row;
+  }
+  .experience-spacer {
+    width: 4px;
+    height: 303px;
+  }
+  .experience-heads {
+    flex-direction: column;
+    gap: 30px;
+    overflow: visible;
   }
 }
 @media (min-width: 1440px) {
@@ -559,6 +634,15 @@ body {
     width: 1600px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .experience-content p {
+    white-space: nowrap;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .experience-content p::-webkit-scrollbar {
+    display: none;
   }
 }
 
