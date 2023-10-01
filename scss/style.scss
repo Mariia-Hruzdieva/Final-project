@@ -556,6 +556,11 @@ body {
     line-height: 30px;
 }
 
+.nav-link:hover {
+    text-decoration: underline;
+    color: $accent;
+}
+
 @media (max-width: 768px) {
     .partner:nth-child(n+7) {
         display: none;
